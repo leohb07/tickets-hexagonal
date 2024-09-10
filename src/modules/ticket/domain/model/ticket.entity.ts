@@ -16,6 +16,10 @@ export class Ticket {
     this.createdAt = new Date();
     this.updatedAt = new Date();
   }
+
+  isClosed(): boolean {
+    return this.status === TicketStatusEnum.CLOSED;
+  }
 }
 
 enum TicketStatusEnum {
